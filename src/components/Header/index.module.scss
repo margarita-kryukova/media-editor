@@ -1,0 +1,186 @@
+.header {
+  position: fixed;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--white-color);
+
+  &__main {
+    position: relative;
+    max-width: 1400px;
+    padding: 12px var(--padding);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @media screen and (min-width: 1280px) {
+      padding: 20px var(--padding);
+      justify-content: flex-end;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    z-index: 50;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    &:active {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--accent-hover-color);
+      outline-offset: 1px;
+      border-radius: 4px;
+    }
+
+    &-line {
+      position: absolute;
+      height: 2px;
+      background-color: var(--dark-color);
+      border-radius: 2px;
+      left: 1.5px;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+
+      &:first-child {
+        top: 5px;
+        animation-name: top-reverse;
+        transform-origin: 0px center;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        animation-name: middle-reverse;
+      }
+
+      &:last-child {
+        bottom: 5px;
+        animation-name: bottom-reverse;
+        transform-origin: 0px center;
+      }
+    }
+
+    &_open {
+      .header__burger-line {
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+
+        &:first-child {
+          animation-name: top-open;
+        }
+
+        &:nth-child(2) {
+          animation-name: middle-open;
+        }
+
+        &:last-child {
+          animation-name: bottom-open;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    padding: 56px 16px;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    box-shadow: 2px 0px 15px rgba($color: #000000, $alpha: 0.05);
+    @media screen and (min-width: 768px) {
+      width: auto;
+      position: relative;
+      opacity: 1;
+      left: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    &_open {
+      left: 0;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes top-open {
+  0% {
+    transform: none;
+    width: 21px;
+  }
+  100% {
+    transform: rotate(29.5deg);
+    width: 24px;
+  }
+}
+@keyframes middle-open {
+  0% {
+    width: 15px;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes bottom-open {
+  0% {
+    transform: none;
+    width: 21px;
+  }
+  100% {
+    transform: rotate(-29.5deg);
+    width: 24px;
+  }
+}
+
+/* Ключевые кадры для закрытия */
+@keyframes top-reverse {
+  0% {
+    transform: rotate(29.5deg);
+    width: 24px;
+  }
+  100% {
+    transform: none;
+    width: 21px;
+  }
+}
+@keyframes middle-reverse {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 15px;
+  }
+}
+@keyframes bottom-reverse {
+  0% {
+    transform: rotate(-29.5deg);
+    width: 24px;
+  }
+  100% {
+    transform: none;
+    width: 21px;
+  }
+}

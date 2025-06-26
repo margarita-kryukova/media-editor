@@ -1,0 +1,56 @@
+:root {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+
+  --padding: 16px;
+  --grey-color: rgba(21, 20, 57, 0.4);
+  --blue-color: #1e0e62;
+  --dark-grey-color: #222228;
+  --dark-color: #1b1b1c;
+  --accent-color: #d71862;
+  --accent-hover-color: #e93a7d;
+  --white-color: #fff;
+  --text-color: rgba(21, 20, 57, 0.4);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (min-width: 768px) {
+    --padding: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    --padding: 115px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+picture,
+video,
+img {
+  display: block;
+}

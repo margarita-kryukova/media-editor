@@ -1,0 +1,77 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  @media screen and (min-width: 1280px) {
+    gap: 30px;
+  }
+
+  &__label {
+    color: var(--white-color);
+    text-align: right;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  &__switch {
+    position: relative;
+    width: 57px;
+    height: 30px;
+    border-radius: 16px;
+    outline: none;
+    transition: 0.5s;
+    appearance: none;
+    background-color: #909090;
+    @media screen and (min-width: 768px) {
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--white-color);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #909090;
+    }
+
+    &:checked:disabled {
+      background-color: #909090;
+    }
+
+    &:checked:not(:disabled) {
+      background-color: #25dac5;
+
+      @media screen and (min-width: 768px) {
+        &:hover {
+          background-color: #00dac0;
+          cursor: pointer;
+
+          &::before {
+            border-color: #00dac0;
+          }
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      border-radius: 20px;
+      transform: scale(1);
+      transition: 0.5s;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: var(--white-color);
+    }
+
+    &:checked::before {
+      left: 30px;
+    }
+  }
+}

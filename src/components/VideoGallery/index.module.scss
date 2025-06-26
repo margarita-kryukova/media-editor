@@ -1,0 +1,91 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  background-color: var(--dark-grey-color);
+
+  .gallery {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px var(--padding);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 16px 12px;
+    @media screen and (min-width: 768px) {
+      gap: 24px 12px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding: 100px var(--padding) 177px;
+      gap: 40px 30px;
+    }
+
+    &__title {
+      grid-column: span 12;
+      margin: 0;
+      color: var(--white-color);
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 34px;
+      letter-spacing: -0.4px;
+      @media screen and (min-width: 768px) {
+        grid-column: 2 / span 10;
+        letter-spacing: 3px;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      @media screen and (min-width: 1280px) {
+        grid-column: 4 / span 6;
+        font-size: 42px;
+        line-height: 52px;
+        letter-spacing: -0.4px;
+      }
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px 12px;
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(10, 1fr);
+        gap: 32px 12px;
+      }
+
+      @media screen and (min-width: 1280px) {
+        gap: 56px 30px;
+      }
+
+      &-wrapper {
+        grid-column: span 12;
+        width: 100%;
+        @media screen and (min-width: 768px) {
+          grid-column: 2 / span 10;
+        }
+      }
+
+      &__video {
+        width: 100%;
+        grid-column: span 12;
+        @media screen and (min-width: 1280px) {
+          grid-column: 2 / span 8;
+        }
+      }
+
+      &__slider {
+        width: calc(100% + 2 * var(--padding));
+        margin: 0 calc(-1 * var(--padding));
+        grid-column: span 12;
+        @media screen and (min-width: 768px) {
+          width: 100%;
+          margin: 0;
+        }
+        @media screen and (min-width: 1280px) {
+          grid-column: span 10;
+        }
+      }
+    }
+  }
+}

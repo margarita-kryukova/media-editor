@@ -1,0 +1,27 @@
+.item {
+  color: var(--dark-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__link {
+    position: relative;
+    padding: 0;
+    color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--grey-color);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--accent-hover-color);
+      outline-offset: 2px;
+      transition: outline 0.3s ease-in-out;
+      border-radius: 8px;
+    }
+  }
+}
