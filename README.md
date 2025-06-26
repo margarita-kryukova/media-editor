@@ -54,52 +54,12 @@ src/
 │   ├── useMenu/        # Управление меню
 │   ├── useMediaQuery/  # Медиа-запросы
 │   └── useIntersectionObserver/ # Intersection Observer API
-├── shared/             # Общие ресурсы
-│   ├── constants/      # Константы и данные
-│   ├── types.ts        # TypeScript типы
-│   ├── ui/            # UI компоненты
-│   ├── icons/         # SVG иконки
-│   └── helpers/       # Вспомогательные функции
-└── assets/            # Статические ресурсы
-```
-
-## Установка и запуск
-
-### Требования
-
-- Node.js 18+
-- npm или yarn
-
-### Установка зависимостей
-
-```bash
-npm install
-```
-
-### Запуск в режиме разработки
-
-```bash
-npm run dev
-```
-
-Приложение откроется по адресу `http://localhost:5173`
-
-### Сборка для продакшена
-
-```bash
-npm run build
-```
-
-### Предварительный просмотр продакшен-сборки
-
-```bash
-npm run preview
-```
-
-### Проверка кода
-
-```bash
-npm run lint
+└── shared/             # Общие ресурсы
+    ├── constants/      # Константы и данные
+    ├── types.ts        # TypeScript типы
+    ├── ui/            # UI компоненты
+    ├── icons/         # SVG иконки
+    └── helpers/       # Вспомогательные функции
 ```
 
 ## Возможности
