@@ -1,5 +1,6 @@
 import styles from "./index.module.scss";
 import { getImagePath } from "../../shared/helpers/getImagePath";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 interface IHeroSectionProps {
   title: string;
@@ -7,7 +8,10 @@ interface IHeroSectionProps {
 }
 
 const HeroSection: React.FC<IHeroSectionProps> = ({ title, description }) => {
-  const heroBgImage = `url(${getImagePath("images/hero-bg.jpg")})`;
+  const isMobile = useMediaQuery(767, "max");
+  const heroBgImage = `url(${getImagePath(
+    isMobile ? "images/hero-bg_mob.jpg" : "images/hero-bg.jpg"
+  )})`;
 
   return (
     <section
