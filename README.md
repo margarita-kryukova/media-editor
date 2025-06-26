@@ -27,7 +27,6 @@
 
 ### Библиотеки
 
-- **React Router DOM** - маршрутизация
 - **React Hook Form** - работа с формами
 - **Swiper** - слайдеры и карусели
 - **React Focus On** - управление фокусом для accessibility
