@@ -137,13 +137,13 @@ export const ABOUT_DATA: IAboutSection = {
     "Мы создали новый продукт, который поможет дизайнерам, разработчикам и небольшим стартапам создать свой сайт быстро и просто.",
   list: [
     {
-      icon: "/icons/bootstrap.svg",
+      icon: getImagePath("icons/bootstrap.svg"),
       title: "Bootstrap 4",
       description:
         "HTML верстка основана на одном из самых распространенных и надежных фреймворков",
     },
     {
-      icon: "/icons/html5.svg",
+      icon: getImagePath("icons/html5.svg"),
       title: "HTML5 & CSS3",
       description:
         "Для достижения наилучшего результата мы использовали только проверенные временем технологии.",
