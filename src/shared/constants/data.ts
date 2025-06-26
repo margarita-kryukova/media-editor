@@ -5,6 +5,7 @@ import type {
   IAboutSection,
   IHero,
 } from "../types";
+import { getImagePath } from "../helpers/getImagePath";
 
 export const HERO_CONTENT: IHero = {
   title: "Превратите свои идеи в реальные достижения",
@@ -15,31 +16,31 @@ export const HERO_CONTENT: IHero = {
 export const GALLERY_DATA: IGalleryItem[][] = [
   [
     {
-      img: "/images/gallery_1.jpg",
+      img: getImagePath("images/gallery_1.jpg"),
       alt: "img 1",
     },
     {
-      img: "/images/gallery_4.jpg",
+      img: getImagePath("images/gallery_4.jpg"),
       alt: "img 4",
     },
   ],
   [
     {
-      img: "/images/gallery_2.jpg",
+      img: getImagePath("images/gallery_2.jpg"),
       alt: "img 2",
     },
     {
-      img: "/images/gallery_5.jpg",
+      img: getImagePath("images/gallery_5.jpg"),
       alt: "img 5",
     },
   ],
   [
     {
-      img: "/images/gallery_3.jpg",
+      img: getImagePath("images/gallery_3.jpg"),
       alt: "img 3",
     },
     {
-      img: "/images/gallery_6.jpg",
+      img: getImagePath("images/gallery_6.jpg"),
       alt: "img 6",
     },
   ],
@@ -49,17 +50,17 @@ export const VIDEOS_DATA: IVideoItem[] = [
   {
     id: 1,
     preview: {
-      jpg: "/images/video_1.jpg",
+      jpg: getImagePath("images/video_1.jpg"),
       webp: "",
     },
     src: [
       {
         type: "video/webm",
-        src: "/video/video_1.webm",
+        src: getImagePath("video/video_1.webm"),
       },
       {
         type: "video/mp4",
-        src: "/video/video_1.mp4",
+        src: getImagePath("video/video_1.mp4"),
       },
     ],
     title: "ЭКСКЛЮЗИВ",
@@ -68,17 +69,17 @@ export const VIDEOS_DATA: IVideoItem[] = [
   {
     id: 2,
     preview: {
-      jpg: "/images/video_2.jpg",
+      jpg: getImagePath("images/video_2.jpg"),
       webp: "",
     },
     src: [
       {
         type: "video/webm",
-        src: "/video/video_2.webm",
+        src: getImagePath("video/video_2.webm"),
       },
       {
         type: "video/mp4",
-        src: "/video/video_2.mp4",
+        src: getImagePath("video/video_2.mp4"),
       },
     ],
     title: "ВЫСОКОЕ КАЧЕСТВО",
@@ -87,17 +88,17 @@ export const VIDEOS_DATA: IVideoItem[] = [
   {
     id: 3,
     preview: {
-      jpg: "/images/video_3.jpg",
+      jpg: getImagePath("images/video_3.jpg"),
       webp: "",
     },
     src: [
       {
         type: "video/webm",
-        src: "/video/video_3.webm",
+        src: getImagePath("video/video_3.webm"),
       },
       {
         type: "video/mp4",
-        src: "/video/video_3.mp4",
+        src: getImagePath("video/video_3.mp4"),
       },
     ],
     title: "ТВОРЧЕСТВО",
@@ -112,8 +113,8 @@ export const TARIFFS_DATA: ITariff[] = [
     priceYear: 500,
     btnAccent: true,
     image: {
-      jpg: "/images/tariff-opt.jpg",
-      webp: "/images/tariff-opt.webp",
+      jpg: getImagePath("images/tariff-opt.jpg"),
+      webp: getImagePath("images/tariff-opt.webp"),
     },
     desc: "Редактируйте фото и видео в режиме онлайн. Создавайте одностраничные сайты из готовых компонентов",
   },
@@ -123,8 +124,8 @@ export const TARIFFS_DATA: ITariff[] = [
     priceYear: 1000,
     btnAccent: false,
     image: {
-      jpg: "/images/tariff-profi.jpg",
-      webp: "/images/tariff-profi.webp",
+      jpg: getImagePath("images/tariff-profi.jpg"),
+      webp: getImagePath("images/tariff-profi.webp"),
     },
     desc: "Редактируйте фото и видео в режиме онлайн. Создавайте одностраничные и многостраничные сайты из готовых компонентов",
   },
@@ -148,7 +149,7 @@ export const ABOUT_DATA: IAboutSection = {
         "Для достижения наилучшего результата мы использовали только проверенные временем технологии.",
     },
   ],
-  image: "/images/about.jpg",
+  image: getImagePath("images/about.jpg"),
 };
 
 export const NAVIGATION_DATA = [
